@@ -6,6 +6,10 @@ export const Icono = styled.img`
     width: 25px;
 `;
 
+export const IconoTema = styled(Icono)`
+    filter: ${({theme}) => theme.filter};
+`
+
 export const Btn = styled.button`
     margin: 15px auto 0px auto;
     display: block;
@@ -23,7 +27,8 @@ export const Box = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    background-color: ${({ theme }) => theme.inside};
+    color: ${({ theme }) => theme.text};
     border-radius: 5px;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
     padding: 20px;
